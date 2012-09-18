@@ -30,7 +30,7 @@ def line_value(line)
         # I only want the channel
         l = line.split("(",2)[-1].strip
         # remove last parentheses. just in case the regexp remove both
-        return l.gsub(/[(,)]/, "")
+        return l.gsub(/[(,),Channel]/, "")
     end
     if line[/ESSID/]
         l = line.split("ESSID:",2)[-1].strip
